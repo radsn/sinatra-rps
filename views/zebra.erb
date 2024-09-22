@@ -1,0 +1,34 @@
+
+<!--#silent ruby embedded ruby file: html in separate file -->
+ <%# if @comp_move == "rock"
+    @outcome = "tied"
+  elsif @comp_move == "paper"
+    @outcome = "lost"
+  else
+    @outcome = "won"
+  end %>
+
+
+
+
+  <h2>
+    We played <%=@our_move%>!
+  </h2>
+
+  <h2>
+   They played <%=@comp_move%>!
+  </h2>
+
+<% if @outcome == "won" %>
+  <h2 style="color: green">
+    We <%=@outcome%>!
+  </h2>
+<% elsif @outcome == "lost" %>
+  <h2 style="color: red">
+    We <%=@outcome%>!
+  </h2>
+<% else %>
+  <h2 style="color: black">
+    We <%=@outcome%>!
+  </h2>
+<%end%>
