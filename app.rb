@@ -1,9 +1,11 @@
 require "sinatra"
 require "sinatra/reloader" #reloads all code when update code
 
+
 get("/") do
   erb(:homepage)
 end
+
 
 get("/rock")do
   moves = ["rock", "paper", "scissors"]
@@ -21,6 +23,7 @@ get("/rock")do
   erb(:zebra)
 end
 
+
 get("/paper")do
   moves = ["rock", "paper", "scissors"]
   @our_move = "paper"
@@ -36,6 +39,7 @@ get("/paper")do
 
   erb(:zebra)
 end
+
 
 get("/scissors")do
   moves = ["rock", "paper", "scissors"]
